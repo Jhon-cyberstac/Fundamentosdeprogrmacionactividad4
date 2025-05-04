@@ -1,0 +1,144 @@
+
+c body {
+    margin: 0;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('Imagenes/personaje-dibujos-animados-rico-mucho-dinero_1029473-530758.avif');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color-dodge;
+    overflow-x: hidden;
+}
+h1 {
+    font-size: 3em;
+    color: #3344aa;
+    text-shadow: 0 0 15px rgba(49, 108, 185, 0.8);
+    margin-bottom: 0.5em;
+    font-family: 'Black Ops One', cursive;
+    letter-spacing: 0.1em;
+    animation: fadeIn 2s ease, neonGlow 2s infinite alternate;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes neonGlow {
+    from { text-shadow: 0 0 10px rgba(255, 107, 129, 0.5); }
+    to { text-shadow: 0 0 20px rgba(255, 107, 129, 0.8); }
+}
+.container {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2em;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    width: 95%;
+    max-width: 500px;
+    border: 3px solid #ffffff;
+    animation: pulse 3s infinite alternate;
+    position: relative;
+    overflow: hidden;
+}
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.04); }
+}
+p {
+    font-size: 1.4em;
+    margin-bottom: 1em;
+    color: #fff;
+}
+input[type="number"] {
+    padding: 1.2em;
+    font-size: 1.1em;
+    width: 85%;
+    margin-bottom: 1.5em;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+input[type="number"]:focus {
+    outline: none;
+    transform: scale(1.06);
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.7);
+}
+.btn {
+    padding: 1.2em 2.5em;
+    font-size: 1.2em;
+    background-color: #ff6b81;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    margin: 0.5em;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+.btn:hover {
+    background-color: #ff4757;
+    transform: scale(1.08);
+    box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.6);
+}
+.btn:active {
+    transform: scale(1);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+#result {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    color: #fff;
+    min-height: 1.8em;
+    letter-spacing: 0.05em;
+    animation: fadeIn 1s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+}
+#reset {
+    display: none;
+    background-color: #4CAF50;
+    color: #fff;
+}
+#reset:hover {
+     background-color: #45a049;
+}
+.genie {
+    position: absolute;
+    bottom: -100px;
+    right: 20px;
+    width: 200px;
+    height: auto;
+    transition: bottom 0.5s ease-in-out;
+    z-index: 0;
+    animation: wave 2s infinite alternate;
+}
+@keyframes wave {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+.container:hover .genie {
+    bottom: 10px;
+}
+.money-pile {
+    position: absolute;
+    bottom: -150px;
+    left: 10px;
+    width: 150px;
+    height: auto;
+    transition: bottom 0.5s ease-in-out;
+    z-index: 0;
+}
+.container:hover .money-pile{
+    bottom: 20px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Mágico de Números</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Análisis Mágico de Números</h1>
+        <form id="formulario-numeros">
+            <label for="numeros">¡Saludos, invocador! Ingresa 10 números:</label><br><br>
+            <div id="campos-numeros">
+                <input type="number" name="numero1" placeholder="Primer número mágico">
+                <input type="number" name="numero2" placeholder="Segundo número mágico">
+                <input type="number" name="numero3" placeholder="Tercer número mágico">
+                <input type="number" name="numero4" placeholder="Cuarto número mágico">
+                <input type="number" name="numero5" placeholder="Quinto número mágico">
+                <input type="number" name="numero6" placeholder="Sexto número mágico">
+                <input type="number" name="numero7" placeholder="Séptimo número mágico">
+                <input type="number" name="numero8" placeholder="Octavo número mágico">
+                <input type="number" name="numero9" placeholder="Noveno número mágico">
+                <input type="number" name="numero10" placeholder="Décimo número mágico">
+            </div>
+            <br>
+            <button type="submit">¡Revelar el destino!</button>
+        </form>
+        <div id="resultados" class="oculto">
+            <h2>Los secretos han sido revelados:</h2>
+            <p>Promedio de los números positivos: <span id="media-positivos"></span></p>
+            <p>Promedio de los números negativos: <span id="media-negativos"></span></p>
+            <p>Cantidad de ceros encontrados: <span id="cantidad-ceros"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
